@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ярослав Антипов](https://github.com/Jaggergreen).
-* Наставник: `Неизвестно`.
+* Наставник: [Илья Ровда].
 
 ---
 
