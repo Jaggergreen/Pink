@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Pink - главная</title>
+  <meta charset="UTF-8">
+  <title>Pink - главная</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="page-header">
@@ -58,9 +59,11 @@
         </section>
         <section class="advantages">
             <div class="advantages__wrapper">
+              <div class="advantages__header">
                 <h2 class="visually-hidden">Наши преимущества</h2>
                 <p class="advantages__slogan">Устали от серости мегаполиса?</p>
                 <p class="advantages__slogan">Нам есть что вам предложить!</p>
+              </div>
                 <ul class="advantages__list">
                     <li class="advantages__item advantages__item--melancholy">
                         <h3 class="advantages__title">Поднимает настроение</h3>
@@ -75,9 +78,6 @@
                         <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
                     </li>
                 </ul>
-                <p class="advantages__image advantages__image--smile">
-                    <img src="http://placehold.it/150x100" alt="Смайлик на фото в мобильном приложении">
-                </p>
             </div>
         </section>
         <section class="reviews">
@@ -109,59 +109,65 @@
                 <h2 class="visually-hidden">Цены</h2>
                 <ul class="price__list slider__list">
                     <li class="price__item slider__item">
+                      <div class="price__header">
                         <h3 class="price__title">База</h3>
                         <p class="price__value">1,99 USD</p>
-                        <ul class="price__field-list">
-                            <li class="price__field-item">
-                                Розовый фильтр
-                                <span class="price__mark price__mark--check">Галочка</span>
-                            </li>
-                            <li class="price__field-item">
-                                Смайлики
-                                <span class="price__mark price__mark--cross">Крестик</span>
-                            </li>
-                            <li class="price__field-item">
-                                Комментарии
-                                <span class="price__mark price__mark--cross">Крестик</span>
-                            </li>
-                        </ul>
+                      </div>
+                      <ul class="price__field-list">
+                        <li class="price__field-item">
+                          Розовый фильтр
+                          <span class="price__mark price__mark--check">Галочка</span>
+                        </li>
+                        <li class="price__field-item">
+                          Смайлики
+                          <span class="price__mark price__mark--cross">Крестик</span>
+                        </li>
+                        <li class="price__field-item">
+                          Комментарии
+                          <span class="price__mark price__mark--cross">Крестик</span>
+                        </li>
+                      </ul>
                     </li>
                     <li class="price__item price__item--active slider__item">
+                      <div class="price__header">
                         <h3 class="price__title">Стандарт</h3>
                         <p class="price__value">3,99 USD</p>
                         <span class="price__hit">Хит</span><!--Подумать над классом по БЭМ-->
-                        <ul class="price__field-list">
-                            <li class="price__field-item">
-                                Розовый фильтр
-                                <span class="price__mark price__mark--check">Галочка</span>
-                            </li>
-                            <li class="price__field-item">
-                                Смайлики
-                                <span class="price__mark price__mark--check">Галочка</span>
-                            </li>
-                            <li class="price__field-item">
-                                Комментарии
-                                <span class="price__mark price__mark--cross">Крестик</span>
-                            </li>
-                        </ul>
+                      </div>
+                      <ul class="price__field-list">
+                        <li class="price__field-item">
+                          Розовый фильтр
+                          <span class="price__mark price__mark--check">Галочка</span>
+                        </li>
+                        <li class="price__field-item">
+                          Смайлики
+                          <span class="price__mark price__mark--check">Галочка</span>
+                        </li>
+                        <li class="price__field-item">
+                          Комментарии
+                          <span class="price__mark price__mark--cross">Крестик</span>
+                        </li>
+                      </ul>
                     </li>
                     <li class="price__item slider__item">
+                      <div class="price__header">
                         <h3 class="price__title">Анлим</h3>
                         <p class="price__value">9,99 USD</p>
-                        <ul class="price__field-list">
-                            <li class="price__field-item">
-                                Розовый фильтр
-                                <span class="price__mark price__mark--check">Галочка</span>
-                            </li>
-                            <li class="price__field-item">
-                                Смайлики
-                                <span class="price__mark price__mark--check">Галочка</span>
-                            </li>
-                            <li class="price__field-item">
-                                Комментарии
-                                <span class="price__mark price__mark--check">Галочка</span>
-                            </li>
-                        </ul>
+                      </div>
+                      <ul class="price__field-list">
+                        <li class="price__field-item">
+                          Розовый фильтр
+                          <span class="price__mark price__mark--check">Галочка</span>
+                        </li>
+                        <li class="price__field-item">
+                          Смайлики
+                          <span class="price__mark price__mark--check">Галочка</span>
+                        </li>
+                        <li class="price__field-item">
+                          Комментарии
+                          <span class="price__mark price__mark--check">Галочка</span>
+                        </li>
+                      </ul>
                     </li>
                 </ul>
                 <div class="price__controls slider__controls">
@@ -188,9 +194,9 @@
                     <adress class="contacts__adress">ул. Большая Конюшенная, 19/8</adress>
                 </li>
             </ul>
-            <p class="contacts__map-picture">
-                <img class="contacts__map-image" src="http://placehold.it/150x100" alt="Карта">
-            </p>
+            <div class="contacts__map-picture">
+
+            </div>
         </section>
     </main>
     <footer>

@@ -1,0 +1,84 @@
+.form-list__item {
+  border: none;
+}
+
+.form-list__item--grey {
+  background-color: #f2f2f2;
+}
+
+.form-list__title {
+  padding-top: 49px;
+
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #d22856;
+}
+
+.form-list__item:last-child .form-list__title {
+  padding-top: 10px;
+  line-height: 30px;
+}
+
+.form-list__personal {
+  @include reset-list;
+}
+
+.form-list__personal-title {
+  line-height: 30px;
+  color: #d22856;
+  text-transform: uppercase;
+}
+
+.form-list__personal-field {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+
+  border: 2px solid #e5e5e5;
+}
+
+.form-list__achievement-title {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+}
+
+.form-list__contacts-title {
+  line-height: 30px;
+  color: #d22856;
+  text-transform: uppercase;
+}
+
+.form-list__contacts-field {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+
+  border: 2px solid #e5e5e5;
+}
+
+.form-list__application-title {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+}
+
+.form-list__emotions {
+  padding: 19px;
+  border: 2px solid #e5e5e5;
+}
+
+.form-list__emotions::placeholder {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+}
+
+.form-list__footnote-asterisk {
+  color: #d22856;
+}
+
+.form-list__footnote {
+  line-height: 30px;
+  text-transform: uppercase;
+}

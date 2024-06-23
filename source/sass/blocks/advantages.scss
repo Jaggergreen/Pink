@@ -1,0 +1,41 @@
+.advantages {
+  background-color: #ffffff;
+}
+
+.advantages__header {
+  padding-top: 45px;
+  padding-bottom: 30px;
+}
+
+.advantages__slogan {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.advantages__item {
+  list-style: none;
+}
+
+.advantages__item--smile {
+  min-height: 430px;
+
+  background-image: url("../../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center 150px;
+}
+
+.advantages__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.advantages__list {
+  padding-top: 80px;
+
+  background-color: #f2f2f2;
+  background-image: url("../../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}

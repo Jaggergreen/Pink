@@ -1,0 +1,42 @@
+body {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283645;
+  background-color: #ffffff;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+@import "variables";
+@import "mixins";
+@import "blocks/advantages";
+@import "blocks/application";
+@import "blocks/button";
+@import "blocks/competition";
+@import "blocks/contacts";
+@import "blocks/copyright";
+@import "blocks/form-list";
+@import "blocks/form-page";
+@import "blocks/gallery";
+@import "blocks/logo";
+@import "blocks/logo-color";
+@import "blocks/main-nav";
+@import "blocks/modal-correct";
+@import "blocks/modal-failure";
+@import "blocks/modal-window";
+@import "blocks/page-footer";
+@import "blocks/page-header";
+@import "blocks/page-main";
+@import "blocks/photo-page";
+@import "blocks/price";
+@import "blocks/reviews";
+@import "blocks/site-list";
+@import "blocks/slider";
+@import "blocks/social";
+@import "blocks/uploading";
+@import "blocks/visually-hidden";
