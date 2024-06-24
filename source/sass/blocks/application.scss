@@ -1,0 +1,39 @@
+.application {
+
+}
+
+.application__hero {
+  margin: 0;
+  height: 396px;
+  background-color: #1d2631;
+  background-image:
+    url("../../img/iphone-hand-mobile@1x.png"),
+    url("../../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position:
+    left bottom,
+    0 0;
+}
+
+.application__wrapper {
+  padding: 28px 20px 30px;
+  background-color: #1d2631;
+}
+
+.application__download-button {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+
+  text-decoration: none;
+}
+
+.application__list {
+  @include reset-list;
+}
+
+.application__description {
+  margin: 0;
+  font-weight: 300;
+}
