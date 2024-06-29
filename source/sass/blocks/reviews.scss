@@ -1,0 +1,31 @@
+.reviews {
+  background-color: #ffffff;
+
+  padding-top: 48px;
+
+  &::after {
+    content: "";
+
+    display: block;
+    height: 90px;   /*временно для наглядности*/
+    width: 320px;   /*временно для наглядности*/
+
+    background-color: #f2f2f2;
+    background-image: url("../../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
+}
+
+.reviews__author-name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.reviews__text {
+  line-height: 30px;
+}
+

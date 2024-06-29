@@ -1,0 +1,51 @@
+.price {
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price__header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: #ffffff;
+
+  background-color: #283645;
+}
+
+.price__title {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.price__value {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.price__hit {
+  font-weight: 600;
+}
+
+.price__field-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price__field-item {
+  border-bottom: 2px solid #e5e5e5; /*переделать под таблицу*/
+  border-left:  2px solid #e5e5e5;
+  border-right:  2px solid #e5e5e5;
+}
+
+.price__controls {
+  background-color: #f2f2f2;
+}

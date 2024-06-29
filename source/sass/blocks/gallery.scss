@@ -1,0 +1,76 @@
+.gallery {
+
+}
+
+.gallery__slogan {
+  padding: 55px 0;
+
+  line-height: 30px;
+}
+
+.gallery__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.gallery__item {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.gallery__hero-title {
+  padding: 6px 0;
+
+  color: #ffffff;
+  background-color: #d22856;
+
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.gallery__image {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__review {
+
+  margin: 0;
+
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  background-color: #f2f2f2;
+
+
+}
+
+.gallery__author-name {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.gallery__review-timer {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.gallery__text {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__like-wrapper {
+  color: #d22856;
+  text-transform: uppercase;
+}
