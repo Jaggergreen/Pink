@@ -1,9 +1,9 @@
 .site-list {
-
+  @include reset-list;
 }
 
 .site-list__item {
-  list-style: none;
+
 }
 
 .site-list a {
@@ -11,4 +11,10 @@
 
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    display: flex;
+  }
 }
