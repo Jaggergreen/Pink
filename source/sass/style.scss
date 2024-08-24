@@ -1,17 +1,5 @@
-body {
-  font-family: OpenSans, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #283645;
-  background-color: #ffffff;
-}
-
-figure {
-  margin: 0;
-  padding: 0;
-}
-
+@import "global";
+@import "fonts";
 @import "variables";
 @import "mixins";
 @import "normalize";

@@ -6,25 +6,35 @@
   background-color: #1d2631;
 }
 
+/*
 .page-header__menu-wrapper {
   width: 320px;
   margin: 0 auto;
 }
+*/
 
+/*
 .page-header__menu-top {
   margin: 0 20px;
 }
 
+ */
+
 @media (min-width: $tablet-width) {
-  .page-header {
+  /*.page-header {
     width: 660px;
   }
+
+   */
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
     min-height: 853px;
     width: 1200px;
+
+    margin: 0 auto;
+
     background-color: #1d2631;
     background-image:
       url("../../img/iphone-hand-desktop@1x.png"),
@@ -38,12 +48,17 @@
       center 0;
   }
 
+  /*
   .page-header__menu-wrapper {
     display: flex;
     min-height: 110px;
   }
+  */
 
+  /*
   .page-header__main-nav-toggle {
     display: none;
   }
+
+   */
 }
