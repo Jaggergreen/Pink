@@ -7,29 +7,39 @@
 </head>
 <body>
     <header class="page-header page-header--photo">
-        <div class="page-header__wrapper">
-            <a class="page-header__logo logo">
-                <img class="logo__image" src="http://placehold.it/150x100" alt="Мини-логотип компании">
-            </a>
-            <button class="page-header__main-nav-toggle" type="button">Открыть меню</button>
-        </div>
-        <nav class="main-nav">
-            <ul class="main-nav__list site-list">
+      <div class="page-header__container">
+        <div class="page-header__menu-wrapper">
+          <nav class="main-nav main-nav--closed">
+            <div class="main-nav__wrapper">
+              <div class="main-nav__menu-top">
+                <a class="main-nav__logo">
+                  <picture>
+                    <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+                    <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+                    <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" alt="Мини-логотип компании">
+                  </picture>
+                </a>
+                <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+              </div>
+              <ul class="main-nav__list site-list">
                 <li class="site-list__item">
-                    <a href="index.html">Главная</a>
+                  <a href="index.html">Главная</a>
                 </li>
                 <li class="site-list__item site-list__item--active">
-                    <a>Фотографии</a>
+                  <a>Фотографии</a>
                 </li>
                 <li class="site-list__item">
-                    <a href="form.html">Конкурс</a>
+                  <a href="form.html">Конкурс</a>
                 </li>
                 <li class="site-list__item">
-                    <a href="https://htmlacademy.ru">HTML Academy</a>
+                  <a href="https://htmlacademy.ru">HTML Academy</a>
                 </li>
-            </ul>
-        </nav>
-        <p class="page-header__slogan">Фотографии пользователей</p>
+              </ul>
+            </div>
+          </nav>
+          <p class="page-header__slogan">Фотографии пользователей</p>
+        </div>
+      </div>
     </header>
     <main class="photo-page">
         <h1 class="visually-hidden">Пользовательская фотогаллерея</h1>

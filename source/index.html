@@ -10,13 +10,17 @@
       <div class="page-header__container">
         <div class="page-header__menu-wrapper">
 
-          <nav class="main-nav">
+          <nav class="main-nav main-nav--closed">
             <div class="main-nav__wrapper">
               <div class="main-nav__menu-top">
                 <a class="main-nav__logo">
-                  <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" alt="Мини-логотип компании">
+                  <picture>
+                    <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+                    <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+                    <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" alt="Мини-логотип компании">
+                  </picture>
                 </a>
-                <button class="main-nav__toggle" type="button">Открыть меню</button>
+                <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
               </div>
               <ul class="main-nav__list site-list">
                 <li class="site-list__item site-list__item--active">

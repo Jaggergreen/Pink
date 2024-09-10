@@ -30,7 +30,7 @@
   background-color: #f2f2f2;
 
   background-image:
-    url("../../img/bg-triangle-white.svg")/*,
+    url("../../../source/img/bg-triangle-white.svg")/*,
     url("../../img/iphone-screen-mobile@1x.png")*/;
   background-repeat: no-repeat;
   background-position:
@@ -70,7 +70,7 @@
   background-color: #f2f2f2;
 
   background-image:
-    url("../../img/iphone-screen-mobile@1x.png");
+    url("../../../source/img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
   background-position:
     center bottom -40px;
@@ -148,7 +148,7 @@
 
     background-color: transparent;
 
-    background-image: url("../../img/iphone-screen-3-tablet@1x.png");
+    background-image: url("../../../source/img/iphone-screen-3-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: auto;
@@ -175,7 +175,7 @@
     padding-top: 130px;
 
 /*Пока здесь заглушка с часами, надо доделать*/
-    background-image: url("../../img/icon-timer.svg");
+    background-image: url("../../../source/img/icon-timer.svg");
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 80%;
@@ -253,21 +253,21 @@
   }
 
   .advantages__item--melancholy {
-    background-image: url("../../img/iphone-screen-1-desktop@1x.png");
+    background-image: url("../../../source/img/iphone-screen-1-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: auto;
   }
 
   .advantages__item--changes {
-    background-image: url("../../img/iphone-screen-2-desktop@1x.png");
+    background-image: url("../../../source/img/iphone-screen-2-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: auto;
   }
 
   .advantages__item--smile {
-    background-image: url("../../img/iphone-screen-3-desktop@1x.png");
+    background-image: url("../../../source/img/iphone-screen-3-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: auto;

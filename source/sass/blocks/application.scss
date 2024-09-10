@@ -35,12 +35,20 @@
 }
 
 .application__download-button {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  width: 274px;
+
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+  text-align: center;
   color: #ffffff;
-
   text-decoration: none;
+
+  border: 3px solid #ffffff;
+  border-radius: 30px;
 }
 
 .application__list {
@@ -97,8 +105,21 @@
 @media (min-width: $desktop-width) {
   .application__container {
     width: 1200px;
-    background-color: transparent;
-    background-image: none;
+    min-height: 853px;
+
+    margin: 0 auto;
+
+    background-color: #1d2631;
+    background-image:
+      url("../../img/iphone-hand-desktop@1x.png"),
+      url("../../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size:
+      auto,
+      cover;
+    background-position:
+      150px bottom,
+      center 0;
   }
 
   .application__hero {
@@ -106,6 +127,8 @@
   }
 
   .application__wrapper {
+    padding-left: 130px;
+    padding-right: 770px;
     background-color: transparent;
     background-image: none;
   }
