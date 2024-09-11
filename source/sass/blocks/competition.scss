@@ -1,12 +1,20 @@
 .competition {
+  margin: 0 auto;
+
+  width: 320px;
   background-color: #ffffff;
 }
 
 .competition__description {
-  line-height: 30px;
+  @include reset-indent;
+  padding: 50px 20px 45px;
 
-  padding-top: 50px;
-  padding-bottom: 45px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.competition__description-full {
+  display: none;
 }
 
 .competition__button-submit {
@@ -19,6 +27,33 @@
   background-color: #2aab6d;
   border: 0;
   border-radius: 2px;
+}
+
+@media (min-width: $tablet-width) {
+  .competition {
+    width: 660px;
+  }
+
+  .competition__description {
+    padding: 95px 85px 70px;
+
+    font-size: 18px;
+  }
+
+  .competition__description-full {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .competition {
+    width: 1200px;
+  }
+
+  .competition__description {
+    padding-left: 205px;
+    padding-right: 205px;
+  }
 }
 
 

@@ -1,5 +1,143 @@
 .main-nav {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+
   font-size: 18px;
   line-height: 32px;
   font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+/*.main-nav__wrapper {
+  padding: 21px 20px;
+}*/
+
+.main-nav__menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main-nav__logo-image {
+  display: block;
+}
+
+
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: 660px;
+  }
+}
+
+
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: 1200px;
+
+    line-height: 18px;
+    font-weight: 300;
+    text-transform: unset;
+    /*margin: 0;
+    padding: 0 120px;
+
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: unset;
+
+    background-color: rgba(#171f28, 30%);*/
+  }
+
+  .main-nav__wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 27px 130px 43px;
+    display: flex;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    background-color: rgba(#171f28, 30%);
+    /*width: 1200px;*/
+    /*margin: 0 auto;*/
+  }
+
+  .main-nav__menu-top {
+    align-items: flex-start;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .main-nav--opened .main-nav__wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: -110px;
+
+    background-color: #283645;
+  }
+
+  .main-nav--opened .main-nav__menu-top {
+    padding: 27px 20px 42px;
+
+    border-bottom: 1px solid #000000;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    width: 24px;
+    height: 24px;
+
+    background-color: transparent;
+    background-image: url("../img/icon-menu-cross.svg");
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+  .main-nav--closed .main-nav__wrapper {
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+
+    background-color: rgba(#171f28, 30%);
+  }
+
+  .main-nav--closed .main-nav__menu-top {
+    padding: 27px 20px 43px;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    width: 50px;
+    height: 24px;
+
+    background-color: transparent;
+    background-image: url("../img/icon-menu-burger.svg");
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--opened .main-nav__wrapper {
+    margin-bottom: -66px;
+  }
+
+  .main-nav--opened .main-nav__menu-top {
+    padding: 22px 20px;
+  }
+
+  .main-nav--closed .main-nav__menu-top {
+    padding: 21px 20px;
+  }
 }

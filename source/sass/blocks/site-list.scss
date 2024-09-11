@@ -1,14 +1,37 @@
 .site-list {
-
+  @include reset-list;
 }
 
 .site-list__item {
-  list-style: none;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000000;
+  background-color: #283645;
 }
 
 .site-list a {
-  color: #ffffff;
+  padding: 15px 0;
+  display: block;
 
+  color: #ffffff;
   text-decoration: none;
-  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 620px;
+  }
+
+  .site-list a {
+    padding: 0;
+  }
+
+  .site-list__item {
+    background-color: transparent;
+    border: none;
+  }
 }

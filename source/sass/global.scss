@@ -1,0 +1,15 @@
+@import "variables";
+
+body {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $main-text-color;
+  background-color: #ffffff;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}

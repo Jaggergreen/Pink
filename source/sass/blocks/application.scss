@@ -2,14 +2,24 @@
 
 }
 
+.application__container {
+  width: 320px;
+  margin: 0 auto;
+
+}
+
 .application__hero {
   margin: 0;
-  height: 396px;
+  padding: 0 20px;
+  height: 462px;
   background-color: #1d2631;
   background-image:
     url("../../img/iphone-hand-mobile@1x.png"),
     url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size:
+    80%,
+    contain;
   background-position:
     left bottom,
     0 0;
@@ -20,20 +30,111 @@
   background-color: #1d2631;
 }
 
+.application__slogan {
+  display: none;
+}
+
 .application__download-button {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  width: 274px;
+
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+  text-align: center;
   color: #ffffff;
-
   text-decoration: none;
+
+  border: 3px solid #ffffff;
+  border-radius: 30px;
 }
 
 .application__list {
   @include reset-list;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .application__description {
   margin: 0;
   font-weight: 300;
+}
+
+@media (min-width: $tablet-width) {
+
+  .application__hero {
+    display: none;
+  }
+
+  .application__container {
+    width: 660px;
+    height: 729px;
+    background-image:
+      url("../../img/iphone-hand-tablet@1x.png"),
+      url("../../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size:
+      auto,
+      cover;
+    background-position:
+      -20px bottom,
+      -270px 0;
+  }
+
+  .application__wrapper {
+    padding-top: 210px;
+    padding-bottom: 110px;
+    padding-left: 20px;
+    padding-right: 340px;
+
+    background-color: transparent;
+  }
+
+  .application__slogan {
+    margin: 0;
+    display: block;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .application__container {
+    width: 1200px;
+    min-height: 853px;
+
+    margin: 0 auto;
+
+    background-color: #1d2631;
+    background-image:
+      url("../../img/iphone-hand-desktop@1x.png"),
+      url("../../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size:
+      auto,
+      cover;
+    background-position:
+      150px bottom,
+      center 0;
+  }
+
+  .application__hero {
+    display: none;
+  }
+
+  .application__wrapper {
+    padding-left: 130px;
+    padding-right: 770px;
+    background-color: transparent;
+    background-image: none;
+  }
+
+  .application__slogan {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }

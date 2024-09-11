@@ -1,24 +1,33 @@
 .contacts {
+  width: 320px;
+  margin: 0 auto;
   padding-top: 45px;
 
   font-size: 24px;
   line-height: 28px;
   font-weight: 300;
+  text-align: center;
 
   background-color: #ffffff;
 }
 
 .contacts__list {
-  padding: 40px 0;
+  @include reset-list;
+  margin: 40px 0;
 
   background-color: #ffffff;
 }
 
-.contacts__slogan {
+.contacts__item {
+  margin-bottom: 20px;
+}
 
+.contacts__slogan {
+  @include reset-indent;
 }
 
 .contacts__title {
+  @include reset-indent;
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
@@ -53,9 +62,116 @@
     contain,
     cover;
   background-position:
-    143px 93px,
+    center top 94px,
     top,
     bottom;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    width: 660px;
+
+    padding-top: 50px;
+  }
+
+  .contacts__slogan {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .contacts__item {
+    width: 330px;
+
+    margin-bottom: 45px;
+
+    flex-grow: 1;
+  }
+
+  .contacts__item:last-child {
+    margin: 0 220px;
+  }
+
+  .contacts__map-picture {
+    width: 660px;
+    height: 374px;
+
+    background-image:
+      url("../../img/icon-map-marker.svg"),
+      url("../../img/bg-triangle-white-footer.svg"),
+      url("../../img/bg-map-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size:
+      auto,
+      contain,
+      auto;
+    background-position:
+      center top 193px,
+      top,
+      top;
+    background-position-y:
+      193px,
+      top,
+      -348px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    width: 1200px;
+
+    padding-top: 70px;
+  }
+
+  .contacts__slogan {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .contacts__list {
+    flex-wrap: nowrap;
+    margin: 60px 120px 20px;
+  }
+
+  .contacts__item {
+    width: 320px;
+
+    margin-bottom: 0;
+  }
+
+  .contacts__item:last-child {
+    margin: 0;
+  }
+
+  .contacts__map-picture {
+    width: 1200px;
+    height: 502px;
+
+    background-image:
+      url("../../img/icon-map-marker.svg"),
+      url("../../img/bg-triangle-white-footer.svg"),
+      url("../../img/bg-map-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size:
+      auto,
+      contain,
+      auto;
+    background-position:
+      center top 263px,
+      top,
+      top;
+    background-position-y:
+      263px,
+      top,
+      -277px;
+  }
 }
 
 

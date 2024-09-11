@@ -1,51 +1,146 @@
 .price {
-  line-height: 30px;
-  text-transform: uppercase;
+  width: 320px;
+  margin: 0 auto;
+
+  background-color: #f2f2f2;
+
+  overflow: hidden;
 }
 
 .price__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  margin-left: -258px;
+
+  width: 836px;
+
+  background-color: #ffffff;
+  border-collapse: collapse;
+
+  & th, & td {
+    border: 2px solid #e5e5e5;
+  }
+}
+
+.price__header--transparent,
+.price__option {
+  display: none;
 }
 
 .price__header {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  @include reset-indent;
 
+  width: 276px;
   color: #ffffff;
 
   background-color: #283645;
 }
 
 .price__title {
-  margin: 0;
-  padding: 0;
+  @include reset-indent;
+
   font-size: 18px;
+  line-height: 30px;
   font-weight: 700;
 }
 
 .price__value {
+  @include reset-indent;
+
   font-size: 24px;
+  line-height: 30px;
   font-weight: 300;
 }
 
-.price__hit {
-  font-weight: 600;
+@media (min-width: $tablet-width) {
+  .price {
+    padding: 0 20px;
+    padding-bottom: 68px;
+
+    width: 620px;
+  }
+
+  .price__list {
+    margin: 0;
+
+    width: 618px;
+  }
+
+  .price__header {
+    width: 152px;
+  }
+
+  .price__title {
+    font-size: 16px;
+  }
+
+  .price__value {
+    font-size: 18px;
+  }
+
+  .price__header--transparent {
+    display: table-cell;
+  }
+
+  .price__option {
+    padding: 7px 15px;
+
+    display: table-cell;
+
+    line-height: 30px;
+    font-weight: 300;
+  }
+
+  .price__mark {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .price__mark--yes {
+    background-image: url("../../img/icon-yes.svg");
+    background-size: 31px 21px;
+  }
+
+  .price__mark--no {
+    background-image: url("../../img/icon-no.svg");
+    background-size: 25px 25px;
+  }
+
+  .price__option--table {
+    display: none;
+  }
+
+  .price__controls {
+    display: none;
+  }
 }
 
-.price__field-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+@media (min-width: $desktop-width) {
+  .price {
+    padding-left: 128px;
+    padding-right: 130px;
+    padding-bottom: 95px;
 
-.price__field-item {
-  border-bottom: 2px solid #e5e5e5; /*переделать под таблицу*/
-  border-left:  2px solid #e5e5e5;
-  border-right:  2px solid #e5e5e5;
-}
+    width: 942px;
+  }
 
-.price__controls {
-  background-color: #f2f2f2;
+  .price__list {
+    width: 942px;
+  }
+
+  .price__header {
+    width: 233px;
+  }
+
+  .price__title {
+    font-size: 18px;
+  }
+
+  .price__value {
+    font-size: 24px;
+  }
+
+  .price__option {
+    padding: 15px 25px;
+
+    font-size: 18px;
+  }
 }

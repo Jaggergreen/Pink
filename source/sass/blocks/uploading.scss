@@ -1,4 +1,8 @@
 .uploading {
+  margin: 0 auto;
+
+  width: 320px;
+
   background-color: #f2f2f2;
 }
 
@@ -6,6 +10,7 @@
   padding: 45px 0;
 
   line-height: 30px;
+  text-align: center;
   background-color: #ffffff;
 }
 
@@ -14,26 +19,47 @@
   padding: 0;
 }
 
-.uploading__image-container {
+.uploading__editor {
   padding: 20px;
+  padding-bottom: 34px;
   border-bottom: 1px solid #dddfe0;
 }
 
-.uploading__crop {
+.uploading__image {
+  display: block;
+}
+
+.uploading__toolkit {
+  padding-top: 42px;
+  padding-bottom: 39px;
+  padding-left: 38px;
+  padding-right: 44px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uploading__tool--crop {
   fill: #d22856;
 }
 
-.uploading__fill {
+.uploading__tool--fill {
   fill: #b5b9be;
 }
 
-.uploading__contrast path {
+.uploading__tool--contrast path {
   fill: #b5b9be;
 }
 
 .uploading__scale-bar {
+  display: none;
+}
+
+.uploading__scale-bar--common {
   display: block;
   position: relative;
+  margin: 0 auto;
 
   width: 240px;
   height: 2px;
@@ -44,42 +70,196 @@
 .uploading__scale-toggle {
   display: block;
   position: absolute;
-  z-index: 100;
+  /*z-index: 100;*/
 
   left: 80%;
   top: -9px;
 
-  fill: #ffffff;
-}
-
-.uploading__scale-toggle path {
-  fill: #d22856;
+  & path {
+    fill: #d22856;
+  }
 }
 
 .uploading__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding-top: 38px;
   padding-bottom: 41px;
 }
 
 .uploading__button {
+  width: 274px;
+  padding: 15px 0;
+
   font-size: 18px;
   line-height: 18px;
+  font-weight: 700;
 
   border: 3px solid #000000;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .uploading__button--upload {
-  font-weight: 300;
+  margin-bottom: 12px;
+
   color: #d22856;
 
   border-color: #d22856;
 }
 
 .uploading__button--cancel {
-  font-weight: 700;
   color: #dddfe0;
 
   border-color: #dddfe0;
+}
+
+@media (min-width: $tablet-width) {
+  .uploading {
+    width: 660px;
+  }
+
+  .uploading__editor {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .uploading__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+  }
+
+  .uploading__toolkit {
+    margin-left: 25px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .uploading__tool {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 18px;
+    width: 257px;
+    height: 70px;
+
+    border-bottom: 1px solid #dddfe0;
+
+    fill: #d22856;
+  }
+
+  .uploading__tool--contrast path {
+    fill: #d22856;
+  }
+
+  .uploading__tool--crop>svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .uploading__tool--fill>svg {
+    width: 24px;
+    height: 22px;
+  }
+
+  .uploading__tool--contrast>svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .uploading__scale-bar {
+    display: block;
+    position: relative;
+    margin-left: auto;
+
+    width: 202px;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  .uploading__scale-bar--common {
+    display: none;
+  }
+
+  .uploading__button-wrapper {
+    padding: 0;
+  }
+
+  .uploading__button {
+    width: 260px;
+  }
+
+  .uploading__button--upload {
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .uploading {
+    padding: 0 130px;
+    width: 940px;
+
+    background-color: #ffffff;
+  }
+
+  .uploading__editor {
+    padding-top: 57px;
+    padding-bottom: 57px;
+    padding-left: 80px;
+    padding-right: 60px;
+
+    background-color: #f2f2f2;
+  }
+
+  .uploading__wrapper {
+    width: 410px;
+  }
+
+  .uploading__toolkit {
+    margin: 0;
+  }
+
+  .uploading__tool {
+    padding-right: 30px;
+    width: 380px;
+    height: 70px;
+  }
+
+  .uploading__tool--crop>svg {
+    width: 43px;
+    height: 44px;
+  }
+
+  .uploading__tool--fill>svg {
+    width: 48px;
+    height: 43px;
+  }
+
+  .uploading__tool--contrast>svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .uploading__scale-bar {
+    width: 288px;
+  }
+
+  .uploading__button-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .uploading__button {
+    width: 183px;
+  }
+
+  .uploading__button--upload {
+    margin: 0;
+  }
 }
 
