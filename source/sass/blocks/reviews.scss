@@ -1,32 +1,36 @@
 .reviews {
-  width: 320px;
-  margin: 0 auto;
-
   background-color: #ffffff;
-
-  padding-top: 48px;
 
   text-align: center;
 
-  &::after {
+  /*&::after {
     content: "";
 
     display: block;
-    height: 90px;   /*временно для наглядности*/
-    width: 100%;   /*временно для наглядности*/
+    height: 90px;
+    width: 100%;
 
     background-color: #f2f2f2;
     background-image: url("../../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
     background-position: left top;
     background-size: contain;
-  }
+  }*/
+}
+
+.reviews-wrapper {
+  margin: 0 auto;
+  padding-top: 45px;
+
+  width: 320px;
+}
+
+.reviews__list {
+  padding: 0 20px;
 }
 
 .reviews__item {
   @include reset-indent;
-
-  padding: 0 20px;
 }
 
 .reviews__author-name {
@@ -44,11 +48,23 @@
 .reviews__text {
   @include reset-indent;
 
+  margin-top: 18px;
+
   line-height: 30px;
+}
+
+.reviews__controls {
+  margin-top: 32px;
 }
 
 @media (min-width: $tablet-width) {
   .reviews {
+
+  }
+
+  .reviews-wrapper {
+    padding-top: 100px;
+
     width: 660px;
   }
 
@@ -58,11 +74,15 @@
   }
 
   .reviews__author-name {
+    margin-top: 35px;
+
     font-size: 20px;
   }
 
   .reviews__author-description {
     @include reset-indent;
+
+    margin-top: 5px;
 
     display: block;
 
@@ -70,6 +90,8 @@
   }
 
   .reviews__text {
+    margin: 0;
+
     order: -1;
 
     font-size: 18px;
@@ -78,11 +100,20 @@
 
 @media (min-width: $desktop-width) {
   .reviews {
+    /*&::after {
+      height: 145px;
+    }*/
+  }
+
+  .reviews-wrapper {
+    padding-top: 190px;
+
     width: 1200px;
 
-    &::after {
-      height: 145px;
-    }
+    background-image: url("../img/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: top 72px center;
+    background-size: 80px 63px;
   }
 
   .reviews__item {

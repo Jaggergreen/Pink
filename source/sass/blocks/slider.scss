@@ -1,0 +1,40 @@
+.slider {
+
+}
+
+.slider__controls {
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 59px;
+}
+
+.slider__toggle {
+  @include reset-indent;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: #bec2c7;
+
+  border: none;
+  border-radius: 50%;
+}
+
+.slider__toggle--active {
+  width: 12px;
+  height: 12px;
+
+  background-color: #ffffff;
+
+  border: 3px solid #000000;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__controls {
+    display: none;
+  }
+}
