@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <title>Форма регистрации Pink</title>
@@ -47,7 +47,7 @@
             <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
             <p class="competition__description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту! <span class="competition__description-full">Пожалуйста, заполните форму ниже:</span></p>
             <form class="competition__form form-list">
-              <div class="form-list__wrapper form-list__wrapper-personal">
+              <div class="form-list__wrapper form-list__wrapper--personal">
                 <fieldset class="form-list__item">
                     <legend class="form-list__title">ФИО</legend>
                     <ul class="form-list__personal">
@@ -66,94 +66,98 @@
                     </ul>
                 </fieldset>
               </div>
-              <div class="form-list__wrapper form-list__wrapper-achievement">
+              <div class="form-list__wrapper form-list__wrapper--achievement">
                 <fieldset class="form-list__item form-list__item--grey">
                     <legend class="form-list__title">Ваши безбашенные достижения в путешествии</legend>
                     <ul class="form-list__achievement">
                         <li class="form-list__checkbox-wrapper">
-                            <input class="visually-hidden" type="checkbox" id="1-achievement" name="1-achievement" checked>
+                            <input class="visually-hidden form-list__achievement-checkbox" type="checkbox" id="1-achievement" name="1-achievement" checked>
                             <label class="form-list__achievement-title" for="1-achievement">Сделал селфи с акулой</label>
                         </li>
                         <li class="form-list__checkbox-wrapper">
-                            <input class="visually-hidden" type="checkbox" id="2-achievement" name="2-achievement" checked>
+                            <input class="visually-hidden form-list__achievement-checkbox" type="checkbox" id="2-achievement" name="2-achievement" checked>
                             <label class="form-list__achievement-title" for="2-achievement">Обгорел на пляже</label>
                         </li>
                         <li class="form-list__checkbox-wrapper">
-                            <input class="visually-hidden" type="checkbox" id="3-achievement" name="3-achievement">
+                            <input class="visually-hidden form-list__achievement-checkbox" type="checkbox" id="3-achievement" name="3-achievement">
                             <label class="form-list__achievement-title" for="3-achievement">Видел Чака Норриса</label>
                         </li>
                         <li class="form-list__checkbox-wrapper">
-                            <input class="visually-hidden" type="checkbox" id="4-achievement" name="4-achievement">
+                            <input class="visually-hidden form-list__achievement-checkbox" type="checkbox" id="4-achievement" name="4-achievement">
                             <label class="form-list__achievement-title" for="4-achievement">Накупил сувениров</label>
                         </li>
                         <li class="form-list__checkbox-wrapper">
-                            <input class="visually-hidden" type="checkbox" id="5-achievement" name="5-achievement" checked>
+                            <input class="visually-hidden form-list__achievement-checkbox" type="checkbox" id="5-achievement" name="5-achievement" checked>
                             <label class="form-list__achievement-title" for="5-achievement">Удержал башню</label>
                         </li>
                         <li class="form-list__checkbox-wrapper">
-                            <input class="visually-hidden" type="checkbox" id="6-achievement" name="6-achievement">
+                            <input class="visually-hidden form-list__achievement-checkbox" type="checkbox" id="6-achievement" name="6-achievement">
                             <label class="form-list__achievement-title" for="6-achievement">Разгромил отель</label>
                         </li>
                     </ul>
                 </fieldset>
               </div>
-              <div class="form-list__wrapper form-list__wrapper-contacts">
+              <div class="form-list__wrapper form-list__wrapper--contacts">
                 <fieldset class="form-list__item">
                     <legend class="form-list__title">Контактная информация</legend>
                     <ul class="form-list__contacts">
                         <li class="form-list__field-wrapper">
-                            <label class="form-list__contacts-title" for="tel">Номер телефона</label>
-                            <input class="form-list__contacts-field" type="tel" id="tel" name="telephone" placeholder="Номер, пожалуйста">
+                          <label class="form-list__contacts-title" for="tel">Номер телефона</label>
+                          <input class="form-list__contacts-field" type="tel" id="tel" name="telephone" placeholder="Номер, пожалуйста">
+                          <div class="form-list__contacts-picture form-list__contacts-picture--tel"></div>
                         </li>
                         <li class="form-list__field-wrapper">
-                            <label class="form-list__contacts-title" for="email">Адрес почты</label>
-                            <input class="form-list__contacts-field" type="email" id="email" name="email" placeholder="Введите почту *" required>
+                          <label class="form-list__contacts-title" for="email">Адрес почты</label>
+                          <input class="form-list__contacts-field" type="email" id="email" name="email" placeholder="Введите почту *" required>
+                          <div class="form-list__contacts-picture form-list__contacts-picture--mail"></div>
                         </li>
                     </ul>
                 </fieldset>
               </div>
-              <div class="form-list__wrapper form-list__wrapper-application">
+              <div class="form-list__wrapper form-list__wrapper--application">
                 <fieldset class="form-list__item form-list__item--grey">
                     <legend class="form-list__title">С каким приложением путешествовали?</legend>
                     <ul class="form-list__application">
-                        <li class="form-list__field-wrapper">
-                            <input class="visually-hidden" type="radio" id="1-application" name="application" checked>
+                        <li class="form-list__radio-wrapper">
+                            <input class="visually-hidden form-list__application-radio" type="radio" id="1-application" name="application" checked>
                             <label class="form-list__application-title" for="1-application">Pink для iOS</label>
                         </li>
-                        <li class="form-list__field-wrapper">
-                            <input class="visually-hidden" type="radio" id="2-application" name="application">
+                        <li class="form-list__radio-wrapper">
+                            <input class="visually-hidden form-list__application-radio" type="radio" id="2-application" name="application">
                             <label class="form-list__application-title" for="2-application">Pink на Android</label>
                         </li>
-                        <li class="form-list__field-wrapper">
-                            <input class="visually-hidden" type="radio" id="3-application" name="application">
+                        <li class="form-list__radio-wrapper">
+                            <input class="visually-hidden form-list__application-radio" type="radio" id="3-application" name="application">
                             <label class="form-list__application-title" for="3-application">Windows Phone</label>
                         </li>
                     </ul>
                 </fieldset>
               </div>
-              <div class="form-list__wrapper form-list__wrapper-emotions">
+              <div class="form-list__wrapper form-list__wrapper--emotions">
                 <fieldset class="form-list__item">
                     <legend class="form-list__title">Опишите свои эмоции</legend>
                     <textarea class="form-list__emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                 </fieldset>
               </div>
-              <div class="form-list__wrapper form-list__wrapper-submit">
+              <div class="form-list__wrapper form-list__wrapper--submit">
                 <button class="competition__button-submit button" type="submit">Отправить форму</button>
-                <p class="form-list__footnote"><span class="form-list__footnote-asterisk">*</span> - обязательные поля</p>
+                <p class="form-list__footnote"><span class="form-list__footnote-asterisk">*</span> обязательные <span class="form-list__footnote-desktop">для заполнения</span> поля</p>
               </div>
             </form>
         </section>
-        <section class="modal-failure modal-window">
+        <section class="modal-window modal-window--failure">
+          <div class="modal-window__wrapper">
             <h2 class="modal-window__title">Что-то пошло не так!</h2>
             <p class="modal-window__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-            <button class="modal-window__button modal-failure__button" type="button">ОК</button>
+          </div>
+            <button class="modal-window--failure__button button" type="button">ОК</button>
         </section>
-        <section class="modal-correct modal-window">
-          <div class="modal-correct__wrapper">
+        <section class="modal-window modal-window--correct">
+          <div class="modal-window__wrapper">
             <h2 class="modal-window__title">Ваша заявка отправлена</h2>
             <p class="modal-window__description">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
           </div>
-          <button class="modal-window__button modal-correct__button" type="button">Закрыть окно</button>
+          <button class="modal-window--correct__button button" type="button">Закрыть окно</button>
         </section>
     </main>
     <footer class="page-footer page-footer--form">

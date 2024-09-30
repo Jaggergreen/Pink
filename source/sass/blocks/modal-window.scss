@@ -1,22 +1,30 @@
+.modal-window {
+  position: fixed;
+  top: calc(50vh - 120px);
+  left: calc(50vw - 170px);
+  width: 320px;
+
+  text-align: center;
+
+
+}
+
+.modal-window--failure {
+  display: none;
+}
+
+.modal-window--correct {
+  display: none;
+}
+
 .modal-window__title {
+  @include reset-indent;
+
   font-size: 18px;
   font-weight: 700;
   color: #000000;
 }
 
 .modal-window__description {
-  margin: 0;
-  padding: 0;
-}
-
-.modal-window__button {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
-
-  background-color: #2aab6d;
-  border: 0;
-  border-radius: 2px;
+  @include reset-indent;
 }
