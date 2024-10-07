@@ -10,7 +10,7 @@
 
 .application__hero {
   margin: 0;
-  padding: 0 20px;
+  /*padding: 0 20px;*/
   height: 462px;
   background-color: #1d2631;
   background-image:
@@ -19,14 +19,17 @@
   background-repeat: no-repeat;
   background-size:
     80%,
-    contain;
+    auto;
   background-position:
     left bottom,
     0 0;
 }
 
 .application__wrapper {
-  padding: 28px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  /*padding: 28px 20px 30px;*/
   background-color: #1d2631;
 }
 
@@ -36,6 +39,7 @@
 
 .application__download-button {
   display: block;
+  margin-top: 28px;
   padding-top: 15px;
   padding-bottom: 16px;
   width: 274px;
@@ -49,18 +53,37 @@
 
   border: 3px solid #ffffff;
   border-radius: 30px;
+
+  &:hover {
+    color: $alternative-color;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba($alternative-color, 0.3);
+    background-color: #ffffff;
+  }
+}
+
+.application__icon {
+  display: block;
 }
 
 .application__list {
   @include reset-list;
+
+  margin-top: 32px;
+  padding-left: 37px;
+  padding-right: 38px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .application__description {
-  margin: 0;
+  margin: 24px 0 28px;
   font-weight: 300;
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
@@ -78,16 +101,16 @@
     background-repeat: no-repeat;
     background-size:
       auto,
-      cover;
+      auto;
     background-position:
-      -20px bottom,
-      -270px 0;
+      bottom,
+      center;
   }
 
   .application__wrapper {
-    padding-top: 210px;
-    padding-bottom: 110px;
-    padding-left: 20px;
+    padding-top: 206px;
+    padding-bottom: 108px;
+    /*padding-left: 20px;*/
     padding-right: 340px;
 
     background-color: transparent;
@@ -95,10 +118,29 @@
 
   .application__slogan {
     margin: 0;
+    padding: 0 50px;
     display: block;
     font-size: 40px;
     line-height: 48px;
     font-weight: 300;
+    text-align: center;
+  }
+
+  .application__list {
+    margin-top: 46px;
+    padding-left: 46px;
+    padding-right: 48px;
+  }
+
+  .application__download-button {
+    width: 294px;
+  }
+
+  .application__description {
+    margin-top: 38px;
+    margin-bottom: 0;
+
+    font-size: 18px;
   }
 }
 
@@ -116,10 +158,10 @@
     background-repeat: no-repeat;
     background-size:
       auto,
-      cover;
+      auto;
     background-position:
       150px bottom,
-      center 0;
+      center;
   }
 
   .application__hero {
@@ -127,14 +169,33 @@
   }
 
   .application__wrapper {
+    padding-top: 218px;
+    padding-bottom: 119px;
     padding-left: 130px;
     padding-right: 770px;
-    background-color: transparent;
-    background-image: none;
+
+    /*background-color: transparent;
+    background-image: none;*/
   }
 
   .application__slogan {
+    padding: 0 25px;
+
     font-size: 50px;
     line-height: 60px;
+  }
+
+  .application__download-button {
+    margin-top: 55px;
+
+    font-size: 21px;
+  }
+
+  .application__list {
+    margin-top: 67px;
+  }
+
+  .application__description {
+    margin-top: 55px;
   }
 }

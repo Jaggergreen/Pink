@@ -1,0 +1,15 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__link {
+  display: block;
+  margin-left: 15px;
+
+  align-self: flex-end;
+
+  & svg {
+    display: block;
+  }
+}

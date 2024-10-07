@@ -7,7 +7,7 @@
 
 .competition__description {
   @include reset-indent;
-  padding: 50px 20px 45px;
+  padding: 48px 20px 32px;
 
   line-height: 30px;
   text-align: center;
@@ -35,7 +35,7 @@
   }
 
   .competition__description {
-    padding: 95px 85px 70px;
+    padding: 93px 85px 70px;
 
     font-size: 18px;
   }
@@ -51,8 +51,7 @@
   }
 
   .competition__description {
-    padding-left: 205px;
-    padding-right: 205px;
+    padding: 94px 205px 63px;
   }
 }
 

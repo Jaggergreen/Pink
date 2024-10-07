@@ -9,8 +9,7 @@
     <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__menu-wrapper">
-
-          <nav class="main-nav main-nav--closed">
+          <nav class="main-nav main-nav--closed main-nav--opened main-nav--nojs">
             <div class="main-nav__wrapper">
               <div class="main-nav__menu-top">
                 <a class="main-nav__logo">
@@ -30,7 +29,7 @@
                   <a href="photo.html">Фотографии</a>
                 </li>
                 <li class="site-list__item">
-                  <a href="#">Конкурс</a>
+                  <a href="form.html">Конкурс</a>
                 </li>
                 <li class="site-list__item">
                   <a href="https://htmlacademy.ru">HTML Academy</a>
@@ -73,11 +72,11 @@
       </section>
     </header>
     <main class="page-main">
-        <h1 class="visually-hidden">Стартовая страница сайта PINK</h1>
+        <h1 class="visually-hidden">Главная страница сайта PINK</h1>
         <section class="advantages">
+          <h2 class="visually-hidden">Наши преимущества</h2>
             <div class="advantages__wrapper">
               <div class="advantages__header">
-                <h2 class="visually-hidden">Наши преимущества</h2>
                 <p class="advantages__slogan">Устали от серости мегаполиса?</p>
                 <p class="advantages__slogan">Нам есть, что вам предложить!</p>
               </div>
@@ -89,21 +88,22 @@
                   </li>
                   <li class="advantages__item advantages__item--changes">
                     <h3 class="advantages__title">Меняет мир вокруг</h3>
-                    <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                    <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br>усилить эффект</p>
                   </li>
                   <li class="advantages__item advantages__item--smile">
                     <h3 class="advantages__title">Заводит новых друзей</h3>
                     <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
                   </li>
                 </ul>
-                <div class="advantages__image"></div>
               </div>
               <div class="advantages__timer">
                 <div class="advantages__timer-container">
-                  <div class="advantages__timer-clock">24</div>
+                  <div class="advantages__timer-clock">
+                    <div class="advantages__timer-time">24</div>
+                  </div>
                   <div class="advantages__timer-description">
                     <h3 class="advantages__timer-title">Эффект<br> на 24 часа!</h3>
-                    <p class="advantages__timer-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+                    <p class="advantages__timer-text">Британские ученые провели исследования и доказали,<br> что положительный эффект<br> от использования приложения длится целые сутки!</p>
                     <a href="#" class="advantages__timer-link">Узнать больше об исследовании</a>
                   </div>
                 </div>
@@ -112,34 +112,42 @@
         </section>
         <section class="reviews">
             <div class="reviews-wrapper slider">
-                <h2 class="visually-hidden">Отзывы</h2>
-                <div class="reviews__list slider__list">
-                    <blockquote class="reviews__item reviews__item--active slider__item">
-                      <cite class="reviews__author-name">Николай Петров</cite>
-                      <p class="reviews__author-description">25 лет, водитель трамвая</p>
-                      <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                    </blockquote>
-                    <blockquote class="reviews__item slider__item">
-                      <cite class="reviews__author-name">Николай Петровв</cite>
-                      <p class="reviews__author-description">25 лет, водитель трамвая</p>
-                      <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                    </blockquote>
-                    <blockquote class="reviews__item slider__item">
-                      <cite class="reviews__author-name">Николай Петроввв</cite>
-                      <p class="reviews__author-description">25 лет, водитель трамвая</p>
-                      <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                    </blockquote>
-                </div>
-                <div class="reviews__controls slider__controls">
-                    <button class="slider__toggle slider__toggle--active" type="button">1</button>
-                    <button class="slider__toggle" type="button">2</button>
-                    <button class="slider__toggle" type="button">3</button>
-                </div>
+              <h2 class="visually-hidden">Отзывы</h2>
+              <input type="radio" id="review-1" name="review-toggles" checked>
+              <input type="radio" id="review-2" name="review-toggles">
+              <input type="radio" id="review-3" name="review-toggles">
+              <div class="reviews__list slider__list">
+                      <blockquote class="reviews__item reviews__item--active slider__item">
+                        <cite class="reviews__author-name">Николай Петров</cite>
+                        <p class="reviews__author-description">25 лет, водитель трамвая</p>
+                        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                      </blockquote>
+                      <blockquote class="reviews__item slider__item">
+                        <cite class="reviews__author-name">Николай Петровв</cite>
+                        <p class="reviews__author-description">25 лет, водитель трамвая</p>
+                        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                      </blockquote>
+                      <blockquote class="reviews__item slider__item">
+                        <cite class="reviews__author-name">Николай Петроввв</cite>
+                        <p class="reviews__author-description">25 лет, водитель трамвая</p>
+                        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                      </blockquote>
+              </div>
+              <div class="reviews__controls slider__controls">
+                <label class="slider__toggle slider__toggle--active" for="review-1"><span class="visually-hidden">1</span></label>
+                <label class="slider__toggle" for="review-2"><span class="visually-hidden">2</span></label>
+                <label class="slider__toggle" for="review-3"><span class="visually-hidden">3</span></label>
+              </div>
+              <div class="reviews__arrow-button reviews__arrow-button--left" type="button"><span class="visually-hidden">Стрелка влево</span></div>
+              <div class="reviews__arrow-button reviews__arrow-button--right" type="button"><span class="visually-hidden">Стрелка вправо</span></div>
             </div>
         </section>
         <section class="price">
             <div class="price__wrapper slider">
                 <h2 class="visually-hidden">Цены</h2>
+              <input type="radio" id="price-1" name="price-toggles">
+              <input type="radio" id="price-2" name="price-toggles" checked>
+              <input type="radio" id="price-3" name="price-toggles">
                 <table class="price__list slider__list">
                   <tr>
                     <th class="price__header--transparent"></th>
@@ -147,7 +155,7 @@
                       <p class="price__title">База</p>
                       <p class="price__value">1,99 USD</p>
                     </th>
-                    <th class="price__header">
+                    <th class="price__header price__header--hit">
                       <p class="price__title">Стандарт</p>
                       <p class="price__value">3,99 USD</p>
                     </th>
@@ -256,9 +264,9 @@
                     </li>-->
                 </table>
                 <div class="price__controls slider__controls">
-                    <button class="slider__toggle" type="button">1</button>
-                    <button class="slider__toggle slider__toggle--active" type="button">2</button>
-                    <button class="slider__toggle" type="button">3</button>
+                    <label class="slider__toggle" for="price-1"><span class="visually-hidden">1</span></label>
+                    <label class="slider__toggle slider__toggle--active" for="price-2"><span class="visually-hidden">2</span></label>
+                    <label class="slider__toggle" for="price-3"><span class="visually-hidden">3</span></label>
                 </div>
             </div>
         </section>
@@ -277,7 +285,7 @@
               </li>
               <li class="contacts__item">
                 <h3 class="contacts__title">Приезжайте в гости:</h3>
-                <adress class="contacts__adress">ул. Большая Конюшенная, 19/8</adress>
+                <adress class="contacts__adress">ул. Большая<br> Конюшенная, 19/8</adress>
               </li>
             </ul>
             <div class="contacts__map-picture">

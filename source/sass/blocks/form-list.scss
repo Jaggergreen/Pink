@@ -1,41 +1,55 @@
+.form-list input {
+  &:hover {
+    border-color: $main-text-color;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $alternative-color;
+    border-radius: 2px;
+  }
+}
+
 .form-list__wrapper {
   padding: 0 20px;
 }
 
+.form-list__wrapper--personal {
+  padding-bottom: 42px;
+
+  & .form-list__title {
+    display: none;
+  }
+}
+
 .form-list__item {
   @include reset-indent;
-  padding-bottom: 42px;
 
   border: none;
 }
 
-.form-list__item--grey { /*ВАЖНО поменять это на центровщик*/
-  padding-top: 40px;
-
-  background-color: #f2f2f2;
-}
-
 .form-list__title {
-  padding: 0;
+  padding: 0 30px;
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
   color: #d22856;
 }
 
-.form-list__wrapper-emotions .form-list__title {
-  line-height: 30px;
-}
-
-.form-list__wrapper-personal .form-list__title {
-  display: none;
-}
-
 .form-list__personal {
   @include reset-list;
 }
 
+.form-list__field-wrapper {
+  margin-top: 18px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
 .form-list__personal-title {
+  margin-left: 23px;
   display: block;
 
   line-height: 30px;
@@ -45,11 +59,13 @@
 
 .form-list__personal-field {
   @include reset-indent;
+
+  margin-top: 6px;
   padding-top: 15px;
   padding-bottom: 14px;
-  padding-left: 20px;
+  padding-left: 22px;
   display: block;
-  width: 256px;
+  width: 254px;
 
   font-size: 18px;
   line-height: 30px;
@@ -61,11 +77,27 @@
 .form-list__achievement {
   @include reset-list;
 
+  margin-top: 41px;
+}
 
+.form-list__wrapper--achievement {
+  padding-top: 39px;
+  padding-bottom: 47px;
+
+  background-color: #f2f2f2;
+}
+
+.form-list__checkbox-wrapper {
+  margin-top: 52px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .form-list__achievement-title {
-  margin-left: 70px;
+  padding-left: 70px;
+  position: relative;
 
   font-size: 18px;
   line-height: 30px;
@@ -73,10 +105,46 @@
 
   cursor: pointer;
   user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 35px;
+    height: 35px;
+
+    background-color: #ffffff;
+
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+  }
+
+  &:hover::before {
+    border-color: $main-text-color;
+  }
+
+  &:active::before {
+    border-color: $alternative-color;
+  }
 }
 
-.form-list__wrapper-contacts .form-list__title {
-  display: none;
+.form-list__achievement-checkbox:checked {
+  & + .form-list__achievement-title::before {
+    background-image: url("../img/icon-yes_alternative.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 16px;
+    background-position: center;
+  }
+}
+
+.form-list__wrapper--contacts {
+  padding-top: 32px;
+  padding-bottom: 42px;
+
+  & .form-list__title {
+    display: none;
+  }
 }
 
 .form-list__contacts {
@@ -84,33 +152,139 @@
 }
 
 .form-list__contacts-title {
+  margin-left: 23px;
+  display: block;
+
   line-height: 30px;
   color: #d22856;
   text-transform: uppercase;
 }
 
+.form-list__contacts-picture {
+  display: none;
+}
+
 .form-list__contacts-field {
+  @include reset-indent;
+
+  margin-top: 6px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  padding-left: 22px;
+  display: block;
+  width: 254px;
+
   font-size: 18px;
   line-height: 30px;
   color: #283645;
 
   border: 2px solid #e5e5e5;
+}
+
+.form-list__wrapper--application {
+  padding-top: 39px;
+  padding-bottom: 47px;
+
+  background-color: #f2f2f2;
 }
 
 .form-list__application {
   @include reset-list;
+
+  margin-top: 40px;
+}
+
+.form-list__radio-wrapper {
+  margin-top: 44px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .form-list__application-title {
+  padding-left: 70px;
+  position: relative;
+
   font-size: 18px;
   line-height: 30px;
   color: #283645;
+
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 35px;
+    height: 35px;
+
+    background-color: #ffffff;
+
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border-color: $main-text-color;
+  }
+
+  &:active::before {
+    border-color: $alternative-color;
+  }
+}
+
+.form-list__application-radio:checked {
+  & + .form-list__application-title::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+
+    background-color: #d22856;
+
+    border: none;
+    border-radius: 50%;
+  }
+}
+
+.form-list__wrapper--emotions {
+  padding-top: 33px;
+  padding-bottom: 48px;
+
+  & .form-list__title {
+    line-height: 30px;
+  }
 }
 
 .form-list__emotions {
   @include reset-list;
-  padding: 19px;
+
+  margin-top: 11px;
+  margin-bottom: -9px;   /*подгон формы под пиксели из макета*/
+  padding: 17px 20px;
+  width: 236px;
+  height: 163px;
+
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+
   border: 2px solid #e5e5e5;
+
+  &:hover {
+    border-color: $main-text-color;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $alternative-color;
+    border-radius: 2px;
+  }
 }
 
 .form-list__emotions::placeholder {
@@ -119,14 +293,42 @@
   color: #283645;
 }
 
-.form-list__footnote-asterisk {
-  color: #d22856;
-}
-
 .form-list__footnote {
+  @include reset-indent;
+
+  margin-top: 36px;
+
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 }
+
+.form-list__footnote-asterisk {
+  color: #d22856;
+
+  &::after {
+    content: "";
+    margin-bottom: 5px;
+    margin-left: 4px;
+    display: inline-block;
+    width: 13px;
+    height: 1px;
+
+    background-color: #283645;
+  }
+}
+
+.form-list__footnote-desktop {
+  display: none;
+}
+
+
+
+
+/*****************************************************/
+/***************   Планшетная версия   ***************/
+/*****************************************************/
+
 
 @media (min-width: $tablet-width) {
   .form-list {
@@ -134,41 +336,84 @@
     flex-direction: column;
   }
 
-  .form-list__wrapper:not(:first-child) .form-list__item {
-    border: 2px solid #e5e5e5;
-  }
-
-  .form-list__field-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .form-list__wrapper-personal {
-    order: 1;
-  }
-
   .form-list__item {
     background-color: #ffffff;
   }
 
+  .form-list__title {
+    line-height: 30px;
+  }
+
+  .form-list__wrapper:not(:first-child) .form-list__item {
+    border: 2px solid #e5e5e5;
+  }
+
+  .form-list__wrapper--personal {
+    padding-bottom: 0;
+
+    order: 1;
+  }
+
+  .form-list__field-wrapper {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
   .form-list__personal-title {
-    margin-right: 20px;
+    margin: 0;
   }
 
   .form-list__personal-field {
+    margin-top: 0;
+    margin-left: 20px;
     flex-grow: 1;
   }
 
-  .form-list__wrapper-achievement {
+  .form-list__wrapper--achievement {
+    margin-top: 51px;
+    padding-top: 0;
+    padding-bottom: 0;
+
     order: 4;
+
+    background-color: #ffffff;
 
     & .form-list__title {
       padding: 0 32px;
     }
   }
 
-  .form-list__wrapper-contacts {
+  .form-list__achievement {
+    margin: 45px 58px 50px;
+  }
+
+  .form-list__checkbox-wrapper {
+    margin-top: 52px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-list__achievement-title {
+    padding-left: 60px;
+  }
+
+  .form-list__wrapper--contacts {
+    margin-top: 51px;
+    padding-top: 0;
+    padding-bottom: 0;
+
     order: 3;
 
     & .form-list__title {
@@ -178,15 +423,86 @@
     }
   }
 
-  .form-list__wrapper-application {
+  .form-list__contacts {
+    margin: 30px 58px 27px;
+
+    & .form-list__field-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &:last-child {
+        margin-top: 29px;
+      }
+    }
+  }
+
+  .form-list__contacts-title {
+    margin-top: 10px;
+
     order: 2;
+  }
+
+  .form-list__contacts-picture {
+    display: block;
+    width: 60px;
+    height: 63px;
+
+    background-color: #e5e5e5;
+    border-radius: 0 2px 2px 0;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .form-list__contacts-picture--tel {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 20px 19px;
+  }
+
+  .form-list__contacts-picture--mail {
+    background-image: url("../img/icon-mail.svg");
+    background-size: 18px 13px;
+  }
+
+  .form-list__contacts-field {
+    margin-top: 0;
+    width: 414px;
+  }
+
+  .form-list__wrapper--application {
+    margin-top: 51px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    order: 2;
+
+    background-color: #ffffff;
 
     & .form-list__title {
       padding: 0 25px;
     }
   }
 
-  .form-list__wrapper-emotions {
+  .form-list__application {
+    margin: 46px 58px 56px;
+  }
+
+  .form-list__radio-wrapper {
+    margin-top: 45px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .form-list__application-title {
+    padding-left: 61px;
+  }
+
+  .form-list__wrapper--emotions {
+    margin-top: 52px;
+    margin-bottom: 67px;
+
     order: 5;
 
     & .form-list__title {
@@ -194,13 +510,28 @@
     }
   }
 
-  .form-list__wrapper-submit {
+  .form-list__emotions {
+    margin: 32px 58px 42px;  /*также снизу на 9px меньше*/
+    width: 456px;
+    height: 155px;
+  }
+
+  .form-list__wrapper--submit {
     display: flex;
     justify-content: space-between;
 
     order: 6;
   }
+
+  .form-list__footnote {
+    margin-top: 0;
+    align-self: center;
+  }
 }
+
+/*****************************************************/
+/***************   Десктопная версия   ***************/
+/*****************************************************/
 
 @media (min-width: $desktop-width) {
   .form-list {
@@ -208,6 +539,7 @@
 
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .form-list__wrapper {
@@ -215,11 +547,143 @@
     width: 100%;
   }
 
-  .form-list__wrapper-personal {
-    width: 470px;
+  .form-list__wrapper--personal {
+    margin-top: 19px;
+    width: 435px;
   }
 
-  .form-list__wrapper-application {
-    width: 470px;
+  .form-list__field-wrapper {
+    &:nth-child(2) {
+      margin-top: 54px;
+    }
+  }
+
+  .form-list__personal-field {
+
+  }
+
+  .form-list__wrapper--achievement {
+    margin-top: 52px;
+  }
+
+  .form-list__achievement {
+    margin: 44px 58px 58px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-list__checkbox-wrapper {
+    margin: 0;
+  }
+
+  .form-list__checkbox-wrapper:first-child {
+    margin: 0;
+    width: 315px;
+
+    order: 1;
+  }
+
+  .form-list__checkbox-wrapper:nth-child(2) {
+    margin-top: 51px;
+    width: 315px;
+
+    order: 4;
+  }
+
+  .form-list__checkbox-wrapper:nth-child(3) {
+    width: 295px;
+
+    order: 2;
+  }
+
+  .form-list__checkbox-wrapper:nth-child(4) {
+    margin-top: 51px;
+    width: 295px;
+
+    order: 5;
+  }
+
+  .form-list__checkbox-wrapper:nth-child(5) {
+    width: 210px;
+    order: 3;
+  }
+
+  .form-list__checkbox-wrapper:last-child {
+    margin-top: 51px;
+    width: 210px;
+
+    order: 6;
+  }
+
+  /*.form-list__achievement-title {
+    padding-left: 60px;
+  }*/
+
+  .form-list__wrapper--contacts {
+    margin-top: 51px;
+
+    & .form-list__field-wrapper {
+      margin: 0;
+      width: 375px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .form-list__contacts {
+    margin: 28px 58px 13px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-list__contacts-title {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .form-list__contacts-field {
+    margin: 0;
+    padding-left: 20px;
+    width: 291px;
+  }
+
+  .form-list__wrapper--application {
+    width: 435px;
+  }
+
+  .form-list__application {
+    margin-top: 49px;
+    margin-bottom: 59px;
+  }
+
+  .form-list__radio-wrapper {
+    margin-top: 42px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .form-list__wrapper--emotions {
+    margin-top: 52px;
+    margin-bottom: 65px;
+  }
+
+  .form-list__emotions {
+    margin-top: 29px;
+    margin-bottom: 34px;
+    width: 776px;
+    height: 90px;
+  }
+
+  .form-list__footnote-desktop {
+    display: inline;
   }
 }

@@ -20,19 +20,20 @@
 
 .gallery__item {
   margin: 0;
-  margin-bottom: 20px;
+  margin-top: 20px;
   /*padding: 0 20px;*/
 
-  &:last-child {
+  /*&:last-child {
     margin: 0;
-  }
+  }*/
 }
 
 .gallery__item--hero {
   @include reset-indent;
   position: relative;
 
-  margin-bottom: 20px;
+  margin-top: 0;
+  /*margin-bottom: 20px;*/
   overflow: visible;
 }
 
@@ -45,17 +46,17 @@
   @include reset-indent;
   position: absolute;
   top: 0;
-  left: 160px;
+  right: 0;
 
-  display: inline-block;
-  padding: 6px 20px;
+  /*display: inline-block;*/
+  padding: 6px 19px;
 
   color: #ffffff;
   background-color: #d22856;
 
   font-size: 12px;
   font-weight: 700;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .gallery__image {
@@ -65,13 +66,16 @@
 }
 
 .gallery__image--hero {
-  width: 100%;
+  position: relative;
+  left: -20px;
+
+  width: 320px;
 }
 
 .gallery__review {
   margin: 0;
   padding-top: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
   padding-left: 18px;
   padding-right: 21px;
 
@@ -83,6 +87,7 @@
 
 .gallery__author-name {
   @include reset-indent;
+
   font-weight: 700;
   font-style: normal;
 }
@@ -98,8 +103,22 @@
 }
 
 .gallery__like-wrapper {
+  margin-top: 5px;
+  display: flex;
+
   color: #d22856;
   text-transform: uppercase;
+}
+
+.gallery__heart {
+}
+
+.gallery__like {
+  margin-left: 19px;
+}
+
+.gallery__like-count {
+  margin-left: 4px;
 }
 
 @media (min-width: $tablet-width) {
@@ -128,15 +147,63 @@
 
   .gallery__item--hero {
     width: 100%;
+
+    & .gallery__review {
+      padding-top: 26px;
+      padding-bottom: 22px;
+      padding-left: 27px;
+      padding-right: 29px;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      height: unset;
+    }
+
+    & .gallery__heart {
+      margin-left: 17px;
+    }
+
+    & .gallery__text {
+      order: 2;
+    }
+
+    & .gallery__like-wrapper {
+      margin-top: 0;
+      margin-left: auto;
+    }
+  }
+
+  .gallery__image--hero {
+    width: 660px;
+  }
+
+  .gallery__hero-title {
+    top: 57px;
   }
 
   .gallery__review {
+    padding-top: 26px;
+    padding-bottom: 23px;
+    padding-left: 28px;
+    padding-right: 32px;
+
     box-sizing: border-box;
     height: 155px;
   }
 
   .gallery__like-wrapper {
     margin-top: auto;
+  }
+
+  .gallery__heart {
+    margin-left: auto;
+
+    order: 2;
+  }
+
+  .gallery__like {
+    margin-left: 0;
   }
 }
 
@@ -153,4 +220,21 @@
     padding: 0 130px;
   }
 
+  .gallery__item {
+    margin-top: 50px;
+  }
+
+  .gallery__item--hero {
+    margin-top: 0;
+  }
+
+  .gallery__image--hero {
+    width: 1200px;
+
+    left: -130px;
+  }
+
+  .gallery__hero-title {
+    top: 54px;
+  }
 }

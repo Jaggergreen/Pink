@@ -1,23 +1,50 @@
 .price {
-  width: 320px;
+
+}
+
+.price__wrapper {
+  padding-top: 133px;
   margin: 0 auto;
 
+  width: 320px;
+
   background-color: #f2f2f2;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: auto;
 
   overflow: hidden;
 }
 
 .price__list {
-  margin-left: -258px;
-
   width: 836px;
 
   background-color: #ffffff;
   border-collapse: collapse;
 
-  & th, & td {
+  transition: transform 0.8s ease;
+
+  /*& th,*/ & td {
     border: 2px solid #e5e5e5;
   }
+
+  & th {
+    border-left: 2px solid #e5e5e5;
+    border-right: 2px solid #e5e5e5;
+  }
+}
+
+#price-1:checked ~ .price__list {
+  transform: translate(20px);
+}
+
+#price-2:checked ~ .price__list {
+  transform: translate(-258px);
+}
+
+#price-3:checked ~ .price__list {
+  transform: translate(-538px);
 }
 
 .price__header--transparent,
@@ -27,11 +54,47 @@
 
 .price__header {
   @include reset-indent;
+  padding: 19px 0;
 
   width: 276px;
+
   color: #ffffff;
+  text-transform: uppercase;
 
   background-color: #283645;
+  border-top: none;
+  border-bottom: none;
+}
+
+.price__header--hit {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 73px;
+    height: 73px;
+
+    content: "";
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    content: "ХИТ";
+
+    line-height: 30px;
+    font-weight: 600;
+
+    transform: rotate(-45deg);
+  }
 }
 
 .price__title {
@@ -50,10 +113,41 @@
   font-weight: 300;
 }
 
+.price__mark {
+  padding-top: 15px;
+  padding-bottom: 14px;
+  padding-left: 22px;
+
+  line-height: 30px;
+  text-transform: uppercase;
+
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+}
+
+.price__mark--yes {
+  background-image: url("../img/icon-yes.svg");
+  background-size: 31px 21px;
+}
+
+.price__mark--no {
+  background-image: url("../img/icon-no.svg");
+  background-size: 27px 26px;
+}
+
+.price__controls {
+  margin-top: 40px;
+  margin-bottom: 47px;
+}
+
+
 @media (min-width: $tablet-width) {
   .price {
-    padding: 0 20px;
-    padding-bottom: 68px;
+
+  }
+
+  .price__wrapper {
+    padding: 109px 20px 68px;
 
     width: 620px;
   }
@@ -62,10 +156,44 @@
     margin: 0;
 
     width: 618px;
+    transition: none;
+
+    & th:first-child {
+      border-color: #f2f2f2;
+    }
+  }
+
+  #price-1:checked ~ .price__list {
+    transform: translate(0);
+  }
+
+  #price-2:checked ~ .price__list {
+    transform: translate(0);
+  }
+
+  #price-3:checked ~ .price__list {
+    transform: translate(0);
   }
 
   .price__header {
+    padding-top: 9px;
+    padding-bottom: 9px;
+
     width: 152px;
+  }
+
+  .price__header--hit {
+    &::before {
+      width: 61px;
+      height: 61px;
+
+      background-image: url("../img/bg-hit-tablet.svg");
+    }
+
+    &::after {
+      top: 5px;
+      left: 5px;
+    }
   }
 
   .price__title {
@@ -78,6 +206,8 @@
 
   .price__header--transparent {
     display: table-cell;
+
+    background-color: #f2f2f2;
   }
 
   .price__option {
@@ -95,26 +225,32 @@
   }
 
   .price__mark--yes {
-    background-image: url("../../img/icon-yes.svg");
+    background-image: url("../img/icon-yes.svg");
     background-size: 31px 21px;
   }
 
   .price__mark--no {
-    background-image: url("../../img/icon-no.svg");
-    background-size: 25px 25px;
+    background-image: url("../img/icon-no.svg");
+    background-size: 27px 26px;
   }
 
   .price__option--table {
     display: none;
   }
 
-  .price__controls {
+  .price .price__controls {
     display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .price {
+
+  }
+
+  .price__wrapper {
+    margin-top: 40px;
+    padding-top: 148px;
     padding-left: 128px;
     padding-right: 130px;
     padding-bottom: 95px;
@@ -127,7 +263,24 @@
   }
 
   .price__header {
+    padding-top: 19px;
+    padding-bottom: 19px;
+
     width: 233px;
+  }
+
+  .price__header--hit {
+    &::before {
+      width: 73px;
+      height: 73px;
+
+      background-image: url("../img/bg-hit.svg");
+    }
+
+    &::after {
+      top: 12px;
+      left: 12px;
+    }
   }
 
   .price__title {
@@ -139,8 +292,9 @@
   }
 
   .price__option {
-    padding: 15px 25px;
+    padding: 14px 24px;
 
     font-size: 18px;
+    font-weight: 400;
   }
 }
