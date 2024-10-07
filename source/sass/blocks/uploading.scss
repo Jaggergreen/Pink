@@ -78,12 +78,22 @@
   /*z-index: 100;*/
 
   left: 80%;
-  top: -9px;
+  top: -6px;
 
   background-color: #f2f2f2;
+  border-radius: 50%;
+
+  & svg {
+    display: block;
+  }
 
   & path {
-    fill: #d22856;
+    fill: $alternative-color;
+  }
+
+  &:active {
+    top: -6px;
+    background-color: $alternative-color;
   }
 }
 
@@ -111,17 +121,42 @@
 }
 
 .uploading__button--upload {
-  color: #d22856;
+  color: $alternative-color;
 
-  border-color: #d22856;
+  border-color: $alternative-color;
+
+  &:hover {
+    color: #ffffff;
+
+    background-color: $alternative-color;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+
+    background-color: $alternative-color;
+  }
 }
 
 .uploading__button--cancel {
   margin-top: 12px;
 
-  color: #dddfe0;
+  color: rgba($main-text-color, 0.1);
 
-  border-color: #dddfe0;
+  border-color: rgba($main-text-color, 0.1);
+
+  &:hover {
+    color: rgba($main-text-color, 0.3);
+
+    border-color: rgba($main-text-color, 0.3);
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.1);
+
+    background-color: #b5b9be;   /*цвет выбран пипеткой по макету*/
+    border-color: #b5b9be;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -1,3 +1,15 @@
+.form-list input {
+  &:hover {
+    border-color: $main-text-color;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $alternative-color;
+    border-radius: 2px;
+  }
+}
+
 .form-list__wrapper {
   padding: 0 20px;
 }
@@ -107,6 +119,14 @@
     border: 2px solid #e5e5e5;
     border-radius: 2px;
   }
+
+  &:hover::before {
+    border-color: $main-text-color;
+  }
+
+  &:active::before {
+    border-color: $alternative-color;
+  }
 }
 
 .form-list__achievement-checkbox:checked {
@@ -206,6 +226,14 @@
     border: 2px solid #e5e5e5;
     border-radius: 50%;
   }
+
+  &:hover::before {
+    border-color: $main-text-color;
+  }
+
+  &:active::before {
+    border-color: $alternative-color;
+  }
 }
 
 .form-list__application-radio:checked {
@@ -247,6 +275,16 @@
   color: #283645;
 
   border: 2px solid #e5e5e5;
+
+  &:hover {
+    border-color: $main-text-color;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $alternative-color;
+    border-radius: 2px;
+  }
 }
 
 .form-list__emotions::placeholder {
@@ -283,6 +321,8 @@
 .form-list__footnote-desktop {
   display: none;
 }
+
+
 
 
 /*****************************************************/

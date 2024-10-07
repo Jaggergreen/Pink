@@ -1,5 +1,7 @@
 .slider {
-
+  & input[type="radio"] {
+    display: none;
+  }
 }
 
 .slider__controls {
@@ -22,19 +24,31 @@
 
   border: none;
   border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #7e868f;
+  }
+
+  &:active {
+    background-color: #e9ebec;
+  }
 }
 
-.slider__toggle--active {
-  width: 12px;
-  height: 12px;
+#review-1:checked ~ .slider__controls .slider__toggle[for="review-1"],
+#review-2:checked ~ .slider__controls .slider__toggle[for="review-2"],
+#review-3:checked ~ .slider__controls .slider__toggle[for="review-3"],
+#price-1:checked ~ .slider__controls .slider__toggle[for="price-1"],
+#price-2:checked ~ .slider__controls .slider__toggle[for="price-2"],
+#price-3:checked ~ .slider__controls .slider__toggle[for="price-3"] {
+    width: 6px;
+    height: 6px;
 
-  background-color: #ffffff;
+    background-color: #ffffff;
 
-  border: 3px solid #000000;
-}
+    border: 3px solid $main-text-color;
+  }
 
 @media (min-width: $tablet-width) {
-  .slider__controls {
-    display: none;
-  }
+
 }

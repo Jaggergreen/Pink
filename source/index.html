@@ -9,8 +9,7 @@
     <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__menu-wrapper">
-
-          <nav class="main-nav main-nav--closed">
+          <nav class="main-nav main-nav--closed main-nav--opened main-nav--nojs">
             <div class="main-nav__wrapper">
               <div class="main-nav__menu-top">
                 <a class="main-nav__logo">
@@ -30,7 +29,7 @@
                   <a href="photo.html">Фотографии</a>
                 </li>
                 <li class="site-list__item">
-                  <a href="#">Конкурс</a>
+                  <a href="form.html">Конкурс</a>
                 </li>
                 <li class="site-list__item">
                   <a href="https://htmlacademy.ru">HTML Academy</a>
@@ -113,34 +112,42 @@
         </section>
         <section class="reviews">
             <div class="reviews-wrapper slider">
-                <h2 class="visually-hidden">Отзывы</h2>
-                <div class="reviews__list slider__list">
-                    <blockquote class="reviews__item reviews__item--active slider__item">
-                      <cite class="reviews__author-name">Николай Петров</cite>
-                      <p class="reviews__author-description">25 лет, водитель трамвая</p>
-                      <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                    </blockquote>
-                    <blockquote class="reviews__item slider__item">
-                      <cite class="reviews__author-name">Николай Петровв</cite>
-                      <p class="reviews__author-description">25 лет, водитель трамвая</p>
-                      <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                    </blockquote>
-                    <blockquote class="reviews__item slider__item">
-                      <cite class="reviews__author-name">Николай Петроввв</cite>
-                      <p class="reviews__author-description">25 лет, водитель трамвая</p>
-                      <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                    </blockquote>
-                </div>
-                <div class="reviews__controls slider__controls">
-                  <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">1</span></button>
-                    <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
-                    <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
-                </div>
+              <h2 class="visually-hidden">Отзывы</h2>
+              <input type="radio" id="review-1" name="review-toggles" checked>
+              <input type="radio" id="review-2" name="review-toggles">
+              <input type="radio" id="review-3" name="review-toggles">
+              <div class="reviews__list slider__list">
+                      <blockquote class="reviews__item reviews__item--active slider__item">
+                        <cite class="reviews__author-name">Николай Петров</cite>
+                        <p class="reviews__author-description">25 лет, водитель трамвая</p>
+                        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                      </blockquote>
+                      <blockquote class="reviews__item slider__item">
+                        <cite class="reviews__author-name">Николай Петровв</cite>
+                        <p class="reviews__author-description">25 лет, водитель трамвая</p>
+                        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                      </blockquote>
+                      <blockquote class="reviews__item slider__item">
+                        <cite class="reviews__author-name">Николай Петроввв</cite>
+                        <p class="reviews__author-description">25 лет, водитель трамвая</p>
+                        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                      </blockquote>
+              </div>
+              <div class="reviews__controls slider__controls">
+                <label class="slider__toggle slider__toggle--active" for="review-1"><span class="visually-hidden">1</span></label>
+                <label class="slider__toggle" for="review-2"><span class="visually-hidden">2</span></label>
+                <label class="slider__toggle" for="review-3"><span class="visually-hidden">3</span></label>
+              </div>
+              <div class="reviews__arrow-button reviews__arrow-button--left" type="button"><span class="visually-hidden">Стрелка влево</span></div>
+              <div class="reviews__arrow-button reviews__arrow-button--right" type="button"><span class="visually-hidden">Стрелка вправо</span></div>
             </div>
         </section>
         <section class="price">
             <div class="price__wrapper slider">
                 <h2 class="visually-hidden">Цены</h2>
+              <input type="radio" id="price-1" name="price-toggles">
+              <input type="radio" id="price-2" name="price-toggles" checked>
+              <input type="radio" id="price-3" name="price-toggles">
                 <table class="price__list slider__list">
                   <tr>
                     <th class="price__header--transparent"></th>
@@ -257,9 +264,9 @@
                     </li>-->
                 </table>
                 <div class="price__controls slider__controls">
-                    <button class="slider__toggle" type="button"><span class="visually-hidden">1</span></button>
-                    <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">2</span></button>
-                    <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
+                    <label class="slider__toggle" for="price-1"><span class="visually-hidden">1</span></label>
+                    <label class="slider__toggle slider__toggle--active" for="price-2"><span class="visually-hidden">2</span></label>
+                    <label class="slider__toggle" for="price-3"><span class="visually-hidden">3</span></label>
                 </div>
             </div>
         </section>
