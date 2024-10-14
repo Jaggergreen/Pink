@@ -11,7 +11,7 @@
 }
 
 .modal-window--failure {
-  display: block;
+  display: none;
 
   background-color: #ffffff;
 }
@@ -58,7 +58,7 @@
   }
 
   .modal-window--failure {
-    display: block;
+    display: none;
   }
 
   .modal-window--correct {
@@ -99,7 +99,7 @@
   }
 
   .modal-window--failure {
-    display: block;
+    display: none;
 
     background-color: #f2f2f2;
   }
