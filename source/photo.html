@@ -9,7 +9,7 @@
     <header class="page-header page-header--photo">
       <div class="page-header__container">
         <div class="page-header__menu-wrapper">
-          <nav class="main-nav main-nav--closed main-nav--nojs">
+          <nav class="main-nav main-nav--closed">
             <div class="main-nav__wrapper">
               <div class="main-nav__menu-top">
                 <a href="index.html" class="main-nav__logo">
@@ -50,9 +50,9 @@
                 <li class="gallery__item gallery__item--hero">
                     <figure>
                       <picture>
-                        <source srcset="img/panorama-desktop@1x.jpg" media="(min-width: 1200px)">
-                        <source srcset="img/panorama-tablet@1x.jpg" media="(min-width: 660px)">
-                        <img class="gallery__image gallery__image--hero" src="img/panorama-mobile@1x.jpg" alt="Прыжок с моста (Бейсджампинг)">
+                        <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x" >
+                        <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+                        <img class="gallery__image gallery__image--hero" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Прыжок с моста (Бейсджампинг)">
                       </picture>
                         <p class="gallery__hero-title">ПАНОРАМА ДНЯ</p>
                         <blockquote class="gallery__review">
@@ -72,9 +72,9 @@
                 <li class="gallery__item">
                     <figure>
                       <picture>
-                        <source srcset="img/photo-car-desktop@1x.jpg" media="(min-width: 1200px)">
-                        <source srcset="img/photo-car-tablet@1x.jpg" media="(min-width: 660px)">
-                        <img class="gallery__image" src="img/photo-car-mobile@1x.jpg" alt="Машина на парковке">
+                        <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                        <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                        <img class="gallery__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Машина на парковке">
                       </picture>
                       <blockquote class="gallery__review">
                         <cite class="gallery__author-name">
@@ -93,9 +93,9 @@
                 <li class="gallery__item">
                     <figure>
                       <picture>
-                        <source srcset="img/photo-drumset-desktop@1x.jpg" media="(min-width: 1200px)">
-                        <source srcset="img/photo-drumset-tablet@1x.jpg" media="(min-width: 660px)">
-                        <img class="gallery__image" src="img/photo-drumset-mobile@1x.jpg" alt="Барабанная установка">
+                        <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                        <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                        <img class="gallery__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Барабанная установка">
                       </picture>
                         <blockquote class="gallery__review">
                             <cite class="gallery__author-name">
@@ -114,9 +114,9 @@
                 <li class="gallery__item">
                     <figure>
                       <picture>
-                        <source srcset="img/photo-window-desktop@1x.jpg" media="(min-width: 1200px)">
-                        <source srcset="img/photo-window-tablet@1x.jpg" media="(min-width: 660px)">
-                        <img class="gallery__image" src="img/photo-window-mobile@1x.jpg" alt="Панорамная крыша">
+                        <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                        <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                        <img class="gallery__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Панорамная крыша">
                       </picture>
                         <blockquote class="gallery__review">
                             <cite class="gallery__author-name">
@@ -135,9 +135,9 @@
                 <li class="gallery__item">
                     <figure>
                       <picture>
-                        <source srcset="img/photo-fair-desktop@1x.jpg" media="(min-width: 1200px)">
-                        <source srcset="img/photo-fair-tablet@1x.jpg" media="(min-width: 660px)">
-                        <img class="gallery__image" src="img/photo-fair-mobile@1x.jpg" alt="Ярмарка Кубанская бахча">
+                        <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                        <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                        <img class="gallery__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Ярмарка Кубанская бахча">
                       </picture>
                         <blockquote class="gallery__review">
                             <cite class="gallery__author-name">
@@ -156,9 +156,9 @@
                 <li class="gallery__item">
                     <figure>
                       <picture>
-                        <source srcset="img/photo-pov-desktop@1x.jpg" media="(min-width: 1200px)">
-                        <source srcset="img/photo-pov-tablet@1x.jpg" media="(min-width: 660px)">
-                        <img class="gallery__image" src="img/photo-pov-mobile@1x.jpg" alt="Ноги на фоне скал">
+                        <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                        <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                        <img class="gallery__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Ноги на фоне скал">
                       </picture>
                         <blockquote class="gallery__review">
                             <cite class="gallery__author-name">
@@ -177,9 +177,9 @@
                 <li class="gallery__item">
                     <figure>
                       <picture>
-                        <source srcset="img/photo-wing-desktop@1x.jpg" media="(min-width: 1200px)">
-                        <source srcset="img/photo-wing-tablet@1x.jpg" media="(min-width: 660px)">
-                        <img class="gallery__image" src="img/photo-wing-mobile@1x.jpg" alt="Закат из окна самолета">
+                        <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                        <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                        <img class="gallery__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Закат из окна самолета">
                       </picture>
                         <blockquote class="gallery__review">
                             <cite class="gallery__author-name">
@@ -205,9 +205,9 @@
           </div>
           <div class="uploading__editor">
             <picture>
-              <source srcset="img/photo-road-desktop@1x.jpg" media="(min-width: 1200px)">
-              <source srcset="img/photo-road-tablet@1x.jpg" media="(min-width: 660px)">
-              <img class="uploading__image" src="img/photo-road-mobile@1x.jpg" alt="Зимняя дорога">
+              <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+              <img class="uploading__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Зимняя дорога">
             </picture>
             <div class="uploading__wrapper">
               <div class="uploading__toolkit">

@@ -2,25 +2,12 @@
   background-color: #ffffff;
 
   text-align: center;
-
-  /*&::after {
-    content: "";
-
-    display: block;
-    height: 90px;
-    width: 100%;
-
-    background-color: #f2f2f2;
-    background-image: url("../../img/bg-triangle-white.svg");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: contain;
-  }*/
 }
 
 .reviews-wrapper {
   margin: 0 auto;
   padding-top: 45px;
+  padding-bottom: 42px;
 
   width: 320px;
 
@@ -88,6 +75,7 @@
 
   .reviews-wrapper {
     padding-top: 100px;
+    padding-bottom: 22px;
 
     width: 660px;
   }
@@ -145,6 +133,7 @@
   .reviews-wrapper {
     position: relative;
     padding-top: 190px;
+    padding-bottom: 40px;
 
     width: 1200px;
 
@@ -181,13 +170,13 @@
     top: 215px;
     left: 130px;
 
-    background-image: url("../../img/icon-review-arrow-left.svg");
+    background-image: url("../img/icon-review-arrow-left.svg");
   }
 
   .reviews__arrow-button--right {
     top: 215px;
     right: 130px;
 
-    background-image: url("../../img/icon-review-arrow-right.svg");
+    background-image: url("../img/icon-review-arrow-right.svg");
   }
 }

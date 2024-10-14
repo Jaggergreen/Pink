@@ -3,7 +3,7 @@
 }
 
 .price__wrapper {
-  padding-top: 133px;
+  padding-top: 91px;
   margin: 0 auto;
 
   width: 320px;
@@ -12,7 +12,7 @@
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: auto;
+  background-size: 320px auto;
 
   overflow: hidden;
 }
@@ -25,7 +25,7 @@
 
   transition: transform 0.8s ease;
 
-  /*& th,*/ & td {
+  & td {
     border: 2px solid #e5e5e5;
   }
 
@@ -81,6 +81,7 @@
 
     background-image: url("../img/bg-hit.svg");
     background-repeat: no-repeat;
+    background-size: 73px 73px;
   }
 
   &::after {
@@ -147,9 +148,12 @@
   }
 
   .price__wrapper {
-    padding: 109px 20px 68px;
+    padding: 87px 20px 68px;
 
     width: 620px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: 660px auto;
   }
 
   .price__list {
@@ -188,6 +192,7 @@
       height: 61px;
 
       background-image: url("../img/bg-hit-tablet.svg");
+      background-size: 61px 61px;
     }
 
     &::after {
@@ -249,13 +254,15 @@
   }
 
   .price__wrapper {
-    margin-top: 40px;
     padding-top: 148px;
     padding-left: 128px;
     padding-right: 130px;
     padding-bottom: 95px;
 
     width: 942px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: 1200px auto;
   }
 
   .price__list {
@@ -275,6 +282,7 @@
       height: 73px;
 
       background-image: url("../img/bg-hit.svg");
+      background-size: 73px 73px;
     }
 
     &::after {
