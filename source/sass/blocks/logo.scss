@@ -1,0 +1,67 @@
+.logo__image {
+  display: block;
+
+  cursor: pointer;
+}
+
+.logo__image--tablet {
+  display: none;
+}
+
+.logo__color-image {
+  display: block;
+
+  color: $main-text-color;
+
+  &:hover {
+    color: $alternative-color;
+  }
+
+  &:active {
+    color: $main-text-color;
+
+    opacity: 0.3;
+  }
+}
+
+.logo__color-image--desktop {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .logo__image {
+    width: 146px;
+  }
+
+  .logo__color-image {
+    display: none;
+  }
+
+  .logo__color-image--desktop {
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-width-only){
+  .logo__image {
+    display: none;
+  }
+
+  .logo__image--tablet {
+    display: block;
+
+    cursor: pointer;
+
+    color: #ffffff;
+
+    &:hover {
+      color: $alternative-color;
+    }
+
+    &:active {
+      color: #ffffff;
+
+      opacity: 0.3;
+    }
+  }
+}

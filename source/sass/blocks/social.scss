@@ -34,4 +34,20 @@
   height: 100%;
 }
 
+.social__image {
+  color: $alternative-color;
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+/*.social__image--youtube {
+  color: $alternative-color;
+
+  &:active {
+    opacity: 0.1;
+  }
+}*/
+
 
