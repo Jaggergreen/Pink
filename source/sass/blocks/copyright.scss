@@ -8,8 +8,19 @@
   margin-left: 15px;
 
   align-self: flex-end;
+}
 
-  & svg {
-    display: block;
+.copyright__html-academy {
+  display: block;
+
+  color: $alternative-color;
+
+  &:hover {
+    color: $main-text-color;
+  }
+
+  &:active {
+    color: $main-text-color;
+    opacity: 0.3;
   }
 }

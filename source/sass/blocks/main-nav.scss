@@ -16,19 +16,13 @@
   align-items: flex-end;
 }
 
-.main-nav__logo-image {
-  display: block;
+.main-nav__toggle {
+  cursor: pointer;
 }
-
-
 
 @media (min-width: $tablet-width) {
   .main-nav {
     width: 660px;
-  }
-
-  .main-nav__logo-image {
-    width: 146px;
   }
 }
 
@@ -77,7 +71,24 @@
     border-bottom: 1px solid #000000;
   }
 
-  .main-nav--opened .main-nav__toggle {
+  .main-nav--opened .main-nav__burger-icon {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__cross-icon {
+    display: block;
+
+    &:hover {
+      color: $alternative-color;
+    }
+
+    &:active {
+      color: $alternative-color;
+      opacity: 0.3;
+    }
+  }
+
+  /*.main-nav--opened .main-nav__toggle {
     width: 24px;
     height: 24px;
 
@@ -86,7 +97,7 @@
     background-repeat: no-repeat;
     background-size: 24px 24px;
     border: none;
-  }
+  }*/
 
   .main-nav--closed .main-nav__wrapper {
     width: 100%;
@@ -100,7 +111,24 @@
     padding: 27px 20px 43px;
   }
 
-  .main-nav--closed .main-nav__toggle {
+  .main-nav--closed .main-nav__burger-icon {
+    display: block;
+
+    &:hover {
+      color: $alternative-color;
+    }
+
+    &:active {
+      color: $alternative-color;
+      opacity: 0.3;
+    }
+  }
+
+  .main-nav--closed .main-nav__cross-icon {
+    display: none;
+  }
+
+  /*.main-nav--closed .main-nav__toggle {
     width: 50px;
     height: 24px;
 
@@ -109,7 +137,7 @@
     background-repeat: no-repeat;
     background-size: 50px 24px;
     border: none;
-  }
+  }*/
 
   .main-nav--closed .main-nav__list {
     display: none;
@@ -128,14 +156,31 @@
     border-bottom: 1px solid #000000;
   }
 
-  .main-nav--nojs .main-nav__toggle {
+  .main-nav--nojs .main-nav__burger-icon {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__cross-icon {
+    display: block;
+
+    &:hover {
+      color: $alternative-color;
+    }
+
+    &:active {
+      color: $alternative-color;
+      opacity: 0.3;
+    }
+  }
+
+  /*.main-nav--nojs .main-nav__toggle {
     width: 24px;
     height: 24px;
 
     background-image: url("../img/icon-menu-cross.svg");
     background-repeat: no-repeat;
     background-size: 24px 24px;
-  }
+  }*/
 
   .main-nav--nojs .main-nav__list {
     display: block;

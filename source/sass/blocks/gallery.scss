@@ -21,11 +21,6 @@
 .gallery__item {
   margin: 0;
   margin-top: 20px;
-  /*padding: 0 20px;*/
-
-  /*&:last-child {
-    margin: 0;
-  }*/
 }
 
 .gallery__item--hero {
@@ -33,13 +28,8 @@
   position: relative;
 
   margin-top: 0;
-  /*margin-bottom: 20px;*/
-  overflow: visible;
-}
 
-.gallery__item--hero .gallery__review {
-  /*margin-left: 20px;
-  margin-right: 20px;*/
+  overflow: visible;
 }
 
 .gallery__hero-title {
@@ -52,11 +42,11 @@
   padding: 6px 19px;
 
   color: #ffffff;
-  background-color: #d22856;
+  background-color: $alternative-color;
 
   font-size: 12px;
   font-weight: 700;
-  /*text-transform: uppercase;*/
+  text-transform: uppercase;
 }
 
 .gallery__image {
@@ -106,7 +96,7 @@
   margin-top: 5px;
   display: flex;
 
-  color: #d22856;
+  color: $alternative-color;
   text-transform: uppercase;
 }
 
@@ -172,6 +162,10 @@
       margin-top: 0;
       margin-left: auto;
     }
+  }
+
+  .gallery__image {
+    width: 300px;
   }
 
   .gallery__image--hero {
